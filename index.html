@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Slither & Climb: Living Board</title>
+    <meta name="description" content="Privacy Policy for Slither & Climb: Living Board mobile game developed by Sameer Bera.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --bg-color: #0b0f15;
+            --surface-color: #121824;
+            --surface-border: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --primary-emerald: #10b981;
+            --primary-emerald-glow: rgba(16, 185, 129, 0.25);
+            --accent-gold: #f59e0b;
+            --accent-cyan: #06b6d4;
+            --code-bg: #1e293b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 0;
+            margin: 0;
+        }
+
+        .background-glow {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 1200px;
+            height: 400px;
+            background: radial-gradient(ellipse at top, rgba(16, 185, 129, 0.12) 0%, rgba(11, 15, 21, 0) 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        header {
+            border-bottom: 1px solid var(--surface-border);
+            background: rgba(18, 24, 36, 0.85);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .brand-badge {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #059669, #10b981);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 15px var(--primary-emerald-glow);
+            font-size: 20px;
+        }
+
+        .brand-title {
+            font-weight: 700;
+            font-size: 1.15rem;
+            letter-spacing: -0.01em;
+        }
+
+        .brand-sub {
+            font-size: 0.8rem;
+            color: var(--accent-gold);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--primary-emerald);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--primary-emerald);
+            box-shadow: 0 0 8px var(--primary-emerald);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 5rem 1.5rem;
+        }
+
+        .hero {
+            margin-bottom: 2.5rem;
+            text-align: left;
+        }
+
+        .hero h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 0.75rem;
+        }
+
+        .meta-item strong {
+            color: var(--text-main);
+        }
+
+        .policy-card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--surface-border);
+            border-radius: 14px;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+            transition: border-color 0.2s ease;
+        }
+
+        .policy-card:hover {
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+
+        .policy-card h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .policy-card h2 .section-num {
+            color: var(--primary-emerald);
+            font-size: 1.1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 0.6rem;
+            color: #cbd5e1;
+        }
+
+        li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-emerald);
+            font-weight: bold;
+        }
+
+        .highlight-box {
+            background: rgba(16, 185, 129, 0.08);
+            border-left: 4px solid var(--primary-emerald);
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.25rem 0;
+            color: #e2e8f0;
+        }
+
+        .info-box {
+            background: rgba(6, 182, 212, 0.08);
+            border-left: 4px solid var(--accent-cyan);
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.25rem 0;
+            color: #e2e8f0;
+        }
+
+        a {
+            color: var(--primary-emerald);
+            text-decoration: none;
+            transition: color 0.15s ease;
+        }
+
+        a:hover {
+            color: #34d399;
+            text-decoration: underline;
+        }
+
+        .app-details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            margin-top: 1rem;
+        }
+
+        .app-detail-item {
+            background: var(--code-bg);
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .app-detail-item span {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 2px;
+        }
+
+        .app-detail-item strong {
+            font-size: 0.95rem;
+            color: #ffffff;
+            font-family: monospace;
+        }
+
+        footer {
+            border-top: 1px solid var(--surface-border);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            background: rgba(18, 24, 36, 0.5);
+        }
+
+        footer p {
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .policy-card {
+                padding: 1.25rem;
+            }
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-glow"></div>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="brand">
+                <div class="brand-badge">🐍</div>
+                <div>
+                    <div class="brand-title">Slither &amp; Climb</div>
+                    <div class="brand-sub">The Living Board</div>
+                </div>
+            </a>
+            <div class="status-pill">
+                <div class="status-dot"></div>
+                Google Play Verified
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h1>Privacy Policy</h1>
+            <div class="hero-meta">
+                <div class="meta-item">Application: <strong>Slither &amp; Climb: Living Board</strong></div>
+                <div class="meta-item">Package: <strong>org.indie.slitherandclimb</strong></div>
+                <div class="meta-item">Developer: <strong>Sameer Bera</strong></div>
+                <div class="meta-item">Effective Date: <strong>October 13, 2026</strong></div>
+            </div>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="section-num">01.</span> Introduction</h2>
+            <p>Welcome to <strong>Slither &amp; Climb: The Living Board</strong> ("we", "our", or "us"). We are committed to maintaining the privacy and security of our users and their devices. This policy transparently outlines how data is handled when you download and play our Android game distributed via Google Play.</p>
+            <div class="highlight-box">
+                <strong>Summary for Players:</strong> Slither &amp; Climb does not ask you for any personal account, email, or passwords. All match results, high scores, unlocked abilities, and settings are stored locally on your device.
+            </div>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="section-num">02.</span> Information We Do NOT Collect</h2>
+            <p>Our game is engineered as a privacy-friendly, offline-first experience:</p>
+            <ul>
+                <li><strong>No User Accounts:</strong> We do not require registration, login credentials, or phone numbers.</li>
+                <li><strong>No Personal Identifiers:</strong> We do not collect your name, email address, physical address, or contact list.</li>
+                <li><strong>No Invasive Device Sensors:</strong> We never request access to your GPS location, camera, microphone, or storage contacts.</li>
+                <li><strong>No Sensitive Financial Information:</strong> All gameplay elements and unlockables are contained entirely in-game without sensitive financial tracking.</li>
+            </ul>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="section-num">03.</span> Third-Party Services &amp; Advertising (Google AdMob)</h2>
+            <p>To support ongoing independent development and keep the game free to play, Slither &amp; Climb integrates <strong>Google AdMob</strong>, an advertising service operated by Google LLC.</p>
+            <p>When ads (such as optional rewarded revival ads or interstitial breaks) are requested, Google AdMob and its advertising partners may automatically process standard non-sensitive device telemetry, such as:</p>
+            <ul>
+                <li><strong>Google Play Advertising ID (AAID):</strong> Used by Google to manage ad delivery, prevent fraud, and control ad frequency.</li>
+                <li><strong>Coarse Location (IP-based):</strong> Used strictly by Google for coarse geographical ad targeting and regional compliance (not precise GPS).</li>
+                <li><strong>Diagnostic &amp; Performance Metrics:</strong> Crash reports, frame rates, and ad viewability statistics to help diagnose technical stability.</li>
+            </ul>
+            <div class="info-box">
+                For complete technical details on how Google processes ad data, please visit the official <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google Advertising Privacy Policy</a>.
+            </div>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="section-num">04.</span> How to Opt Out of Personalized Ads</h2>
+            <p>You maintain full control over advertising preferences on Android. If you wish to disable personalized ad recommendations across Google Play apps:</p>
+            <ul>
+                <li>Open your Android device <strong>Settings</strong> app.</li>
+                <li>Navigate to <strong>Google</strong> &rarr; <strong>Ads</strong> (or <strong>Privacy</strong> &rarr; <strong>Ads</strong> depending on your manufacturer).</li>
+                <li>Tap <strong>Delete Advertising ID</strong> or toggle on <strong>Opt out of Ads Personalization</strong>.</li>
+            </ul>
+            <p>Once opted out, you will still see ads, but they will not be based on your online browsing profile.</p>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="section-num">05.</span> Children's Privacy (COPPA Compliance)</h2>
+            <p>Slither &amp; Climb does not intentionally target or collect personal identifying information from children under the age of 13. Our AdMob integration is configured according to Google Families and COPPA regulations. If a parent or guardian becomes aware that personal information was inadvertently provided, please contact us immediately, and we will promptly rectify the situation.</p>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="section-num">06.</span> Data Security &amp; Local Storage</h2>
+            <p>Because we do not transmit personal player files or accounts to remote proprietary servers, your local game progression remains secure on your personal Android device. Any cache files or saved configurations can be wiped at any time by going into Android <em>Settings &rarr; Apps &rarr; Slither &amp; Climb &rarr; Clear Data</em>.</p>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="section-num">07.</span> Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time to reflect operational, legal, or regulatory updates. Any changes will be posted directly to this public web page with an updated "Effective Date". We recommend reviewing this page periodically.</p>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="section-num">08.</span> Contact Us</h2>
+            <p>If you have any questions, suggestions, or concerns regarding this Privacy Policy or the game's data practices, please reach out to the developer directly:</p>
+            <div class="app-details-grid">
+                <div class="app-detail-item">
+                    <span>Developer</span>
+                    <strong>Sameer Bera</strong>
+                </div>
+                <div class="app-detail-item">
+                    <span>Contact Email</span>
+                    <strong><a href="mailto:sameerbera000@gmail.com">sameerbera000@gmail.com</a></strong>
+                </div>
+                <div class="app-detail-item">
+                    <span>Application ID</span>
+                    <strong>org.indie.slitherandclimb</strong>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sameer Bera. All rights reserved.</p>
+        <p style="margin-top: 6px; font-size: 0.8rem;">Slither &amp; Climb: The Living Board Game &bull; Distributed via Google Play Store</p>
+    </footer>
+
+</body>
+</html>
